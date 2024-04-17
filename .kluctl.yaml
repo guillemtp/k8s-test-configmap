@@ -3,3 +3,5 @@ args:
     default: "app_default_value_in_app"
   - name: global_example_param
     default: "global_default_value_in_app"
+
+discriminator: app-helm
