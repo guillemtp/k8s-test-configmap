@@ -1,0 +1,36 @@
+name: Release Helm Chart
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'charts/**'  # Ajusta aquest camí segons on guardes els teus fitxers de chart
+
+jobs:
+  release-chart:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Install Helm
+        run: |
+          curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+      - name: Package Helm Chart
+        run: |
+          helm package charts/kluctl-app-helm-chart -d docs/  # Ajusta el camí del teu chart i el directori de destinació
+
+      - name: Update Helm repo index
+        run: |
+          helm repo index docs/ --url https://guillemtp.github.io/kluctl-app-helm-chart/
+          git add docs/
+          git commit -m "Update Helm chart"
+          git push
