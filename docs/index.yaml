@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  kluctl-app-helm-chart:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-04-17T14:35:01.474803+02:00"
+    description: A testing app with a simple configmap
+    digest: 9d8cdd949e8ef4e29e863189c9ac0e1a1113c397c9e46ad217dc9d3d52c942fb
+    name: kluctl-app-helm-chart
+    type: application
+    urls:
+    - https://guillemtp.github.io/kluctl-app-helm-chart/kluctl-app-helm-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-17T14:35:01.474519+02:00"
