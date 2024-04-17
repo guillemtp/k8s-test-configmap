@@ -1,0 +1,2 @@
+app_example_param: "{{ args.app_example_param }}"
+global_example_param: "{{ args.global_example_param }}"

@@ -1,0 +1,4 @@
+helmChart:
+  path: ../charts/kluctl-app-helm-chart
+  releaseName: "kluctl-app-helm-chart-release-name"
+  skipPrePull: true
