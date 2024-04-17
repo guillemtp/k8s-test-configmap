@@ -3,7 +3,7 @@ name: Release Helm Chart
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'charts/**'  # Ajusta aquest camí segons on guardes els teus fitxers de chart
 
